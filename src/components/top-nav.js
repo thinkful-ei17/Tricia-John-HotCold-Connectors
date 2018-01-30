@@ -1,8 +1,9 @@
 import React from 'react';
-
+import {connect} from 'react-redux';
 import './top-nav.css';
+import {restartGame,generateAuralUpdate} from './actions/actions';
 
-export default function TopNav(props) {
+export function TopNav(props) {
   return (
     <nav>
       <ul className="clearfix">

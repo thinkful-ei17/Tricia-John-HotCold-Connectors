@@ -1,15 +1,14 @@
 import React from 'react';
-
+import {makeGuess} from './actions/actions';
+import {connect} from 'react-redux';
 import './guess-form.css';
 
 export class GuessForm extends React.Component {
   onSubmit(event) {
     event.preventDefault();
 
-    if (event.target.value) {
-      const value = event.target.value;
-      this.props.dispatch(onMakeGuess(value));
-    }
+    const value = this.input.value;
+    this.props.dispatch(makeGuess(value));
     this.input.value = '';
     this.input.focus();
   }

@@ -1,4 +1,4 @@
-import * as actions from '../actions';
+import * as actions from '../actions/actions';
 
 const initialState = {
   guesses: [],
@@ -33,7 +33,7 @@ export const hotColdReducer = (state = initialState, action )=> {
     return Object.assign({}, state, {feedback, guesses: [...state.guesses, action.guess]})
   }
 
-  else if (action.type === actions.START_A_NEW_GAME) {
+  else if (action.type === actions.RESTART_GAME) {
     return Object.assign({}, state, {
       guesses: [],
       feedback: 'Make your guess!',

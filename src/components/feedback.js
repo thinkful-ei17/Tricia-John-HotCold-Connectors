@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {connect} from 'react-redux';
 import './feedback.css';
 
 export function Feedback(props) {
@@ -27,9 +27,9 @@ export function Feedback(props) {
   )
 };
 
-export const mapToStateProps = state => ({
+export const mapStateToProps = state => ({
   feedback: state.feedback,
   guessCount: state.guesses.length
 });
 
-export default connect(mapToStateProps)(Feedback);
+export default connect(mapStateToProps)(Feedback);
