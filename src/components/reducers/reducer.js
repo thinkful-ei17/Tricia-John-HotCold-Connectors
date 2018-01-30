@@ -1,6 +1,5 @@
 import * as actions from '../actions';
 
-
 const initialState = {
   guesses: [],
   feedback: 'Make your guess!',
@@ -9,10 +8,6 @@ const initialState = {
 };
 
 export const hotColdReducer = (state = initialState, action )=> {
-//place the actions
-// make a guess
-// start a new game
-// generateAuralUpdate
 
   if (action.type === actions.MAKE_GUESS) {
     action.guess = parseInt(action.guess, 10);

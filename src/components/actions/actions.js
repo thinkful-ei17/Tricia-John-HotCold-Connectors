@@ -4,9 +4,9 @@ export const makeGuess = guess => ({
     guess
 });
 
-export const START_A_NEW_GAME = 'START_A_NEW_GAME';
-export const startANewGame = () => ({
-    type: START_A_NEW_GAME
+export const RESTART_GAME = 'RESTART_GAME';
+export const restartGame = () => ({
+    type: RESTART_GAME
 });
 
 export const GENERATE_AURAL_UPDATE = 'GENERATE_AURAL_UPDATE';

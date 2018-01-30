@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AuralStatus(props) {
+export function AuralStatus(props) {
   return (
     <p
       id="status-readout"
@@ -10,5 +10,11 @@ export default function AuralStatus(props) {
     >
       {props.auralStatus}
     </p>
-  );
-}
+  )
+};
+
+export const mapToStateProps = state => ({
+  auralStatus: state.auralStatus
+});
+
+export default connect()(AuralStatus);
